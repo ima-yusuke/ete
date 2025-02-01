@@ -17,6 +17,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/dashboard/category', [CategoryController::class, 'ShowCategory'])->name('show.category');
+    Route::post('/dashboard/category', [CategoryController::class, 'AddCategory'])->name('add.category');
+
 });
 
 require __DIR__.'/auth.php';
