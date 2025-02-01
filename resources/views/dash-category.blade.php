@@ -17,17 +17,33 @@
             @if($categories->isEmpty())
                 <p>カテゴリーが登録されていません</p>
             @else
-                <ul class="w-[50%]">
-                    @foreach($categories as $category)
-                        <li class="flex justify-between items-center border-b border-solid border-gray-200 py-2">
-                            <p>{{$category->name}}</p>
-                            {{--                        <form action="{{route('delete.category', $category->id)}}" method="post">--}}
-                            {{--                            @csrf--}}
-                            {{--                            <button type="submit" class="bg-red-500 text-white rounded-lg px-4 py-2">削除</button>--}}
-                            {{--                        </form>--}}
-                        </li>
-                    @endforeach
-                </ul>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>カテゴリー名</th>
+                            <th>編集</th>
+                            <th>削除</th>
+                        </tr>
+                    </thead>
+                   <tbody>
+                   @foreach($categories as $category)
+                       <tr>
+                           <td>{{$category->name}}</td>
+                           <td>
+                               <form action="{{route('edit.category', $category->id)}}" method="get">
+                                   <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-xl">編集</button>
+                               </form>
+                           </td>
+                           <td>
+                               <form action="{{route('delete.category', $category->id)}}" method="post">
+                                   @csrf
+                                   <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded-lg shadow-xl">削除</button>
+                               </form>
+                           </td>
+                       </tr>
+                   @endforeach
+                   </tbody>
+                </table>
             @endif
 
     </div>
