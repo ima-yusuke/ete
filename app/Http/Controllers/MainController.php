@@ -12,7 +12,12 @@ class MainController extends Controller
          ['id' => 2, 'img' => "pic-02.jpg"],
          ['id' => 3, 'img' => "pic-03.jpg"],
          ['id' => 4, 'img' => "pic-04.jpg"],
-         ['id' => 5, 'img' => "pic-05.jpg"]
+         ['id' => 5, 'img' => "pic-05.jpg"],
+         ['id' => 6, 'img' => "pic-01.jpg"],
+        ['id' => 7, 'img' => "pic-02.jpg"],
+         ['id' => 8, 'img' => "pic-03.jpg"],
+         ['id' => 9, 'img' => "pic-04.jpg"],
+         ['id' => 10, 'img' => "pic-05.jpg"]
     ];
 
     public function Show(){
