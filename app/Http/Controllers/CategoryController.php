@@ -22,7 +22,13 @@ class CategoryController extends Controller
         $category = new Category();
         $category->name = $request->name;
         $category->save();
+        return redirect()->route('show.category');
+    }
 
-        return $this->ShowCategory();
+    public function DeleteCategory($id)
+    {
+        $category = Category::find($id);
+        $category->delete();
+        return redirect()->route('show.category');
     }
 }

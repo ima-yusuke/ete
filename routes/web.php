@@ -19,7 +19,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard/category', [CategoryController::class, 'ShowCategory'])->name('show.category');
     Route::post('/dashboard/category', [CategoryController::class, 'AddCategory'])->name('add.category');
     Route::patch('/dashboard/category', [CategoryController::class, 'AddCategory'])->name('edit.category');
-    Route::delete('/dashboard/category/{category}', [CategoryController::class, 'DeleteCategory'])->name('delete.category');
+    Route::delete('/dashboard/category/{id}', [CategoryController::class, 'DeleteCategory'])->name('delete.category');
 
 });
 
