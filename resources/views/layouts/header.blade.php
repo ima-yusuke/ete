@@ -2,7 +2,7 @@
     <div class="w-full">
         <div class="flex justify-between h-16 mx-8">
             <div class="shrink-0 flex items-center">
-                <a href="/" class="font-bold text-2xl">
+                <a href="/dashboard" class="font-bold text-2xl">
                     管理画面
                 </a>
             </div>

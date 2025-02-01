@@ -22,9 +22,11 @@
                     @include('layouts.navigation')
                 </div>
                 <!-- Page Content -->
-                <main class="h-full w-full">
-                    {{ $slot }}
-                </main>
+                <div class="flex flex-col w-full">
+                    <main class="flex-1 w-full">
+                        {{ $slot }}
+                    </main>
+                </div>
             </div>
         </div>
     </body>

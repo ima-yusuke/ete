@@ -3,15 +3,14 @@
     <div class="px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col gap-6">
             <ul class="flex flex-col gap-6">
-                <x-nav-list fontawesome="fa-solid fa-list" title="宿泊施設一覧" link="Show"/>
-                <x-nav-list fontawesome="fa-solid fa-hotel" title="新規宿泊施設登録" link="Show"/>
-                <x-nav-list fontawesome="fa-solid fa-plane" title="KNT支店一覧" link="Show"/>
-                <x-nav-list fontawesome="fa-solid fa-house" title="KNT新規支店登録" link="Show"/>
+                <x-nav-list fontawesome="fa-solid fa-list" title="カテゴリー編集" link="show.category"/>
+                <x-nav-list fontawesome="fa-solid fa-image" title="画像編集" link="Show"/>
             </ul>
 
             <p class="border-b border-solid border-gray-200"></p>
 
             <ul class="flex flex-col gap-6">
+                <x-nav-list fontawesome="fa-solid fa-house" title="ユーザーページ" link="Show"/>
                 <x-nav-list fontawesome="fa-solid fa-gear" title="マイページ" link="profile.edit"/>
 
                 <form method="POST" action="{{ route('logout') }}">
