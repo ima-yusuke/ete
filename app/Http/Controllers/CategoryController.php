@@ -25,6 +25,18 @@ class CategoryController extends Controller
         return redirect()->route('show.category');
     }
 
+    public function EditCategory(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
+
+        $category = Category::find($id);
+        $category->name = $request->name;
+        $category->save();
+        return redirect()->route('show.category');
+    }
+
     public function DeleteCategory($id)
     {
         $category = Category::find($id);
